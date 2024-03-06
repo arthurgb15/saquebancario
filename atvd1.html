@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade01</title>
+</head>
+<body>
+ <form>
+        <p> Saldo Disponivel: <input type="number" id="numero" readonly value="20000"> </p>
+        <p> Digite o Valor a sacar: <Input type="text" id="nome"> </p>
+        <button type="button" onclick="obterDados()"> Confirmar </button>
+        <p>
+         valor: <input type="text" id="result" readonly placeholder="Saída">
+        </p>
+    </form>
+    <script>
+        function obterDados() {
+        let nome = parseFloat(document.getElementById("nome").value);
+        let numero = parseFloat(document.getElementById("numero").value);
+        //  alert("ok");
+        if(nome <= numero){
+        alert("Operação autorizada ✔️​");           
+        document.getElementById ("result").value = nome;
+        document.getElementById ("result").style.color = "green";
+        }else{
+         alert("Operação não autorizada ❌​");
+        }
+        }
+    </script>
+</body>
+</html>
